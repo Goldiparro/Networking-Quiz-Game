@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['current_set'] = 'a';
 include '../config/database.php';
 
 // Set default timezone
@@ -499,8 +500,7 @@ $current_question = $_SESSION['questions'][$current_question_id];
     <!-- Submit Button -->
     <div class="mt-4">
         <form method="POST" action="results.php" onsubmit="return confirm('Are you sure you want to submit your quiz?');">
-            <button type="submit"
-                    class="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-200 flex items-center justify-center">
+            <button type="submit" class="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-200 flex items-center">
                 <i class="fas fa-paper-plane mr-2"></i>
                 Submit Quiz
             </button>
